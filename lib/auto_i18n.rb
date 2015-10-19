@@ -1,5 +1,6 @@
 require 'auto_i18n/view_helpers/action_view'
 require 'auto_i18n/core_ext'
+require 'auto_i18n/output_safety'
 
 module AutoI18n
 

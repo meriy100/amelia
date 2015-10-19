@@ -3,6 +3,6 @@
 class PostController < ApplicationController
   def index
      @auto_i18n = AutoI18n::ViewHelpers::ActionView::Greet.new 'Bob'
-     @message = @auto_i18n.message
+     @message = 'hello'
   end
 end
