@@ -1,4 +1,5 @@
 require 'auto_i18n/view_helpers/action_view'
+require 'auto_i18n/core_ext'
 
 module AutoI18n
 
