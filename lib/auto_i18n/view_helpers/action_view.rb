@@ -5,15 +5,14 @@ require 'action_view'
 module AutoI18n
   module ViewHelpers
     module ActionView
-
-        class Greet
+         class Greet
           def initialize name
             @hello = "Hi #{name} !"
           end
 
           def message
             @hello
-          end
+           end
         end
 
         def new_method_from_gem
