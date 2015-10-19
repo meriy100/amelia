@@ -1,0 +1,3 @@
+= AutoI18n
+
+This project rocks and uses MIT-LICENSE.
