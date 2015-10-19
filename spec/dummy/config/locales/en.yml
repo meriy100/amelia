@@ -4,6 +4,7 @@ en:
   apple:
     one: an apple
     other: '%{count} apples'
+  foo: bar
   goo:
     one: "%{gohe} goo"
     other: "baa"
