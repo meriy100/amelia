@@ -1,4 +1,6 @@
 require 'active_support/benchmarkable'
+require 'helpers/tag_helper'
+require 'helpers/asset_tag_helper'
 
 module ActionView #:nodoc:
   module Helpers #:nodoc:
