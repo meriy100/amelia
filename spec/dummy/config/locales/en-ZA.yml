@@ -1,12 +1,5 @@
 ---
-en:
-  hello: "Hello World"
-  apple:
-    one: an apple
-    other: '%{count} apples'
-  goo:
-    one: "%{gohe} goo"
-    other: "baa"
+en-ZA:
   date:
     abbr_day_names:
     - Sun
@@ -159,7 +152,7 @@ en:
         separator: "."
         significant: false
         strip_insignificant_zeros: false
-        unit: "$"
+        unit: R
     format:
       delimiter: ","
       precision: 3

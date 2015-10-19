@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  resources :post , only: :index
+  scope "(/:locale)", locale: /en|ja/ do
+    resources :post , only: :index
+    resources :plans
+  end
 end
