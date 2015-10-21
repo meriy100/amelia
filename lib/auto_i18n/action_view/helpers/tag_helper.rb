@@ -2,10 +2,7 @@ require 'active_support/core_ext/string/output_safety'
 require 'set'
 
 module ActionView
-  # = Action View Tag Helpers
   module Helpers #:nodoc:
-    # Provides methods to generate HTML tags programmatically when you can't use
-    # a Builder. By default, they output XHTML compliant tags.
     module TagHelper
       extend ActiveSupport::Concern
       include CaptureHelper
