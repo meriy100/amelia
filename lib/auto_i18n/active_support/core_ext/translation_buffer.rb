@@ -1,50 +1,3 @@
-require 'erb'
-require 'active_support/core_ext/kernel/singleton_class'
-require 'active_support/deprecation'
-
-
-class Object
-  def html_safe?
-    false
-  end
-#
-  def internationalization
-    self
-  end
-#
-# alias :i18n :internationalization
-
-  def translate_flag?
-    true
-  end
-end
-
-class Numeric
-  def html_safe?
-    false
-  end
-#
-#  def internationalization
-#    self
-#  end
-#
-# alias :i18n :internationalization
-
-  def translate_flag?
-    false
-  end
-end
-
-module ActiveSupport #:nodoc:
-  class SafeBuffer < String
-    def internationalization
-      self
-    end
-
-    alias :i18n :internationalization
-  end
-end
-
 class TranslationBuffer < String
   class TranslationConcatError < StandardError
     def initialize
@@ -74,7 +27,6 @@ class TranslationBuffer < String
 
   def internationalization
     translate_flag? ? translate(self, @options) : self
-#   translate(self, @options)
   end
 
   alias :i18n :internationalization
@@ -128,7 +80,9 @@ class TranslationBuffer < String
         keys.last.to_s
       end
     end
+
     alias :t :translate
+
     def scope_key_by_partial(key)
       if key.to_s.first == "."
         if @virtual_path
@@ -142,65 +96,3 @@ class TranslationBuffer < String
     end
 end
 
-class String
-  # Marks a string as trusted safe. It will be inserted into HTML with no
-  # additional escaping performed. It is your responsibilty to ensure that the
-  # string contains no malicious content. This method is equivalent to the
-  # `raw` helper in views. It is recommended that you use `sanitize` instead of
-  # this method. It should never be called on user input.
-  def html_safe
-    ActiveSupport::SafeBuffer.new(self)
-  end
-
-  def internationalization
-    TranslationBuffer.new(self).i18n
-  end
-
-  alias :i18n :internationalization
-
-  def internationalization_options options = {}
-    TranslationBuffer.new(self).io options
-  end
-
-  alias :io :internationalization_options
-
-  def translate_false
-    TranslationBuffer.new(self).translate_false
-  end
-end
-
-module LocalizationBuffer
-  def internationalization
-    I18n.l self, (@options ||= {})
-  end
-
-  def translate_flag?
-    !defined?(@translate_flag) || @translate_flag
-  end
-
-  alias :i18n :internationalization
-
-  def internationalization_options options = {}
-    @options = options
-    self
-  end
-
-  alias :io :internationalization_options
-
-  def translate_false
-    @translate_flag = false
-    self
-  end
-end
-
-class Time
-  include LocalizationBuffer
-end
-
-class DateTime 
-  include LocalizationBuffer
-end
-
-class Date
-  include LocalizationBuffer
-end
