@@ -39,7 +39,7 @@ describe "post/helper_tag.html.erb" do
   it "button tag 内の hello" do
     expect(rendered).to match '<button name="button" type="submit">Hello World</button>'
   end
-  it "button tag 内の hello" do
-    expect(rendered).to match '<button name="button" type="submit">Hello World</button>'
+  it "select 内の hello" do
+    expect(rendered).to match '<option value="1">Hello World</option>'
   end
 end
