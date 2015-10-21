@@ -42,4 +42,7 @@ describe "post/helper_tag.html.erb" do
   it "select 内の hello" do
     expect(rendered).to match '<option value="1">Hello World</option>'
   end
+  it "button 内の Rangeなどはi18n をかけずにそのまま表示" do
+    expect(rendered).to match '<button name="button" type="submit">1..10</button>'
+  end
 end
