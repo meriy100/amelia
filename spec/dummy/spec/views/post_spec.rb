@@ -32,3 +32,14 @@ describe 'post/index.html.erb' do
   end
 end
 
+describe "post/helper_tag.html.erb" do
+  before do
+    render
+  end
+  it "button tag 内の hello" do
+    expect(rendered).to match '<button name="button" type="submit">Hello World</button>'
+  end
+  it "button tag 内の hello" do
+    expect(rendered).to match '<button name="button" type="submit">Hello World</button>'
+  end
+end
