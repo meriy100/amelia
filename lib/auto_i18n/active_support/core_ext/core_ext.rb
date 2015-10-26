@@ -11,6 +11,10 @@ class Object
   def translate_flag?
     true
   end
+  def translate_false
+    @translate_flag = false
+    self
+  end
 end
 
 class Numeric
