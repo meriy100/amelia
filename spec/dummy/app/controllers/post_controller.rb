@@ -8,8 +8,13 @@ class PostController < ApplicationController
 
   def jsrender
     respond_to do |format|
-        format.js
-      end
+      format.html
+      format.js
+    end
+  end
+
+  def helper_tag
+
   end
 
 end
