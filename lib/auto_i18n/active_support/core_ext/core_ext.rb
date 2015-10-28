@@ -1,3 +1,5 @@
+require 'auto_i18n/active_support/core_ext/localization_buffer'
+
 class Object
 
   def internationalization
@@ -8,6 +10,10 @@ class Object
 
   def translate_flag?
     true
+  end
+  def translate_false
+    @translate_flag = false
+    self
   end
 end
 

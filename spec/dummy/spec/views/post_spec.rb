@@ -32,3 +32,17 @@ describe 'post/index.html.erb' do
   end
 end
 
+describe "post/helper_tag.html.erb" do
+  before do
+    render
+  end
+  it "button tag 内の hello" do
+    expect(rendered).to match '<button name="button" type="submit">Hello World</button>'
+  end
+  it "select 内の hello" do
+    expect(rendered).to match '<option value="1">Hello World</option>'
+  end
+  it "button 内の Rangeなどはi18n をかけずにそのまま表示" do
+    expect(rendered).to match '<button name="button" type="submit">1..10</button>'
+  end
+end

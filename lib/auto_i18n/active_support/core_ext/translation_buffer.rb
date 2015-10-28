@@ -26,7 +26,7 @@ class TranslationBuffer < String
   end
 
   def internationalization
-    translate_flag? ? translate(self, @options) : self
+    translate_flag? ? translate(self, @options).translate_false : self
   end
 
   alias :i18n :internationalization

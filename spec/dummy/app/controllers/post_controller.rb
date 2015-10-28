@@ -5,4 +5,16 @@ class PostController < ApplicationController
      @auto_i18n = AutoI18n::ViewHelpers::ActionView::Greet.new 'Bob'
      @message = 'hello'
   end
+
+  def jsrender
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+  def helper_tag
+
+  end
+
 end

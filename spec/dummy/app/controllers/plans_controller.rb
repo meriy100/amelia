@@ -16,6 +16,10 @@ class PlansController < ApplicationController
   # GET /plans/new
   def new
     @plan = Plan.new
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /plans/1/edit

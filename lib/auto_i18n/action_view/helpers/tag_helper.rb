@@ -2,10 +2,7 @@ require 'active_support/core_ext/string/output_safety'
 require 'set'
 
 module ActionView
-  # = Action View Tag Helpers
   module Helpers #:nodoc:
-    # Provides methods to generate HTML tags programmatically when you can't use
-    # a Builder. By default, they output XHTML compliant tags.
     module TagHelper
       extend ActiveSupport::Concern
       include CaptureHelper
@@ -25,8 +22,9 @@ module ActionView
         def content_tag_string(name, content, options, escape = true, translate = true )
           tag_options = tag_options(options, escape) if options
           if translate
-            i18n_scope_content = I18n.t(content)
-            content = i18n_scope_content.match("translation missing") ? content : i18n_scope_content
+ #           i18n_scope_content = I18n.t(content)
+ #           content = i18n_scope_content.match("translation missing") ? content : i18n_scope_content
+            content = content.internationalization
           end
           content     = ERB::Util.unwrapped_html_escape(content) if escape
           "<#{name}#{tag_options}>#{PRE_CONTENT_STRINGS[name.to_sym]}#{content}</#{name}>".html_safe
