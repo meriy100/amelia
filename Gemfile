@@ -23,10 +23,7 @@ group :development do
   gem 'awesome_print'          # プリントデバッグの出力を整形
   gem 'hirb'                   # SQLの結果を見やすく整形してくれる
   gem 'hirb-unicode'           # hirbの日本語対応
-  gem 'bcrypt-ruby'
   gem 'rails_best_practices'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
 end
 # To use a debugger
 # gem 'byebug', group: [:development, :test]

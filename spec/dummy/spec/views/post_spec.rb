@@ -15,6 +15,9 @@ describe 'post/index.html.erb' do
   it "html_safe では 自動置き換えしない" do
     expect(rendered).to match "html_safe: hello"
   end
+  it "translate 後の translate_false が String 以外でも定義されてるか" do
+    expect(rendered).to match "Hash: {:words_connector=&gt;&quot;, &quot;, :two_words_connector=&gt;&quot; and &quot;, :last_word_connector=&gt;&quot;, and &quot;}"
+  end
   it "count チェック 1 の時" do
     expect(rendered).to match "Apple counter1: an apple"
   end
@@ -29,6 +32,11 @@ describe 'post/index.html.erb' do
   end
   it "Time: format short" do
     expect(rendered).to match "Time: 31 Dec 23:59"
+  end
+  describe "Symbol の場合" do
+    it "Symbol 単体" do
+      expect(rendered).to match "Symbol: apple"
+    end
   end
 end
 
