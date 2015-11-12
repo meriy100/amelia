@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    auto_i18n (0.0.2)
+    auto_i18n (0.0.4)
       rails (~> 4.2.4)
 
 GEM
