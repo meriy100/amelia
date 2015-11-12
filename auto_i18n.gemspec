@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = AutoI18n::VERSION
   s.authors     = ["meriy100"]
   s.email       = ["ttattataa@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of AutoI18n."
-  s.description = "TODO: Description of AutoI18n."
+  s.homepage    = "http://www.sw.it.aoyama.ac.jp/2015/kariyado/index.html"
+  s.summary     = "Summary of AutoI18n."
+  s.description = "Description of AutoI18n."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]

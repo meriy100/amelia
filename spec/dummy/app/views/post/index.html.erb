@@ -1,5 +1,24 @@
-<% # spec/dummy/app/views/post/index.html.erb %>
+<h1>title</h1>
+hello: <%= "hello" %>
+<br>
+translate_false: <%= 'hello'.translate_false %>
+<br>
+html_safe: <%= 'hello'.html_safe %>
+<br>
+Hash: <%= "support.array" %>
+<br>
+Apple counter1: <%= 'apple'.io count: 1 %>
+<br>
+Apple counter2: <%= 'apple'.io count: 2 %>
+<br>
+DateTime: <%= DateTime.new(2015, 1, 1, 1, 1, 1, 1).io format: :long %>
+<br>
+Date: <%= Date.new(2012, 5, 15) %>
+<br>
+Time: <%= Time.new(2015, 12, 31, 23, 59, 59).io format: :short %>
+<br>
+Symbol: <%= :apple %>
+<br>
+goo: <%= "foo" %>
+<br>
 
-<%= new_method_from_gem %>
-<%= @message %>
-<%= link_to_name %>
