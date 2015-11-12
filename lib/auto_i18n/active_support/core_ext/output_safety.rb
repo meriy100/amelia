@@ -8,6 +8,12 @@ module ActiveSupport #:nodoc:
       self
     end
 
+    def safe_concat value
+      value.internationalization
+      raise SafeConcatError unless html_safe?
+      original_concat value
+    end
+
     alias :i18n :internationalization
   end
 end
