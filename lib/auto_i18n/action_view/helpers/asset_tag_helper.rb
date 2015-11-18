@@ -17,7 +17,7 @@ module ActionView
     module AssetTagHelper
       extend ActiveSupport::Concern
 
-      include AssetUrlHelper
+      include ActionView::Helpers::AssetUrlHelper
       include TagHelper
 
       def javascript_include_tag(*sources)
