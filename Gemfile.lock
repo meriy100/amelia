@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    auto_i18n (0.0.4)
-      rails (~> 4.2.4)
+    auto_i18n (0.0.5)
+      rails (~> 4.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -200,4 +200,4 @@ DEPENDENCIES
   twitter-bootstrap-rails
 
 BUNDLED WITH
-   1.10.3
+   1.10.6
