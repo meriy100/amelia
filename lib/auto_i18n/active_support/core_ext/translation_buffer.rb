@@ -79,6 +79,8 @@ class TranslationBuffer < String
         keys = I18n.normalize_keys(e.locale, e.key, e.options[:scope])
         keys.last.to_s
       end
+    rescue I18n::ArgumentError => e
+      key
     end
 
     alias :t :translate
