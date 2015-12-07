@@ -16,6 +16,15 @@ module LocalizationBuffer
 
   alias :io :internationalization_options
 
+  def format arg
+    if @options.blank?
+      @options = {format: arg}
+    else
+      @options[:format] = arg
+    end
+    self
+  end
+
   def translate_false
     @translate_flag = false
     self
