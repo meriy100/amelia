@@ -6,6 +6,10 @@ describe 'post/index.html.erb' do
     render
   end
 
+  it "virtual_path" do
+    expect(rendered).to match "TestTitle"
+  end
+
   it "は、タイトルを表示すること" do
     expect(rendered).to match "hello: Hello World"
   end

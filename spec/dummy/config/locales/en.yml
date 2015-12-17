@@ -1,5 +1,8 @@
 ---
 en:
+  post:
+    index:
+      title: TestTitle
   plans:
     index:
       title: "Plans"

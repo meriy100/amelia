@@ -3,6 +3,9 @@ ja:
   plans:
     index:
       title: "予定一覧"
+  post:
+    index:
+      title: テストタイトル
   hello: 'こんにちは'
   apple:
     one: 'りんご1個'
