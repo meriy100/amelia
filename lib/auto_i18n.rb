@@ -8,7 +8,9 @@ require 'auto_i18n/active_support/core_ext/localization_buffer'
 require 'auto_i18n/action_view/helpers/asset_tag_helper'
 require 'auto_i18n/action_view/helpers/tag_helper'
 require 'auto_i18n/action_view/helpers/form_helper'
+require 'auto_i18n/action_view/helpers/capture_helper'
 require 'auto_i18n/action_view/buffer'
+require 'auto_i18n/action_view/template/handlers/erb.rb'
 
 module AutoI18n
 #  autoload :ActionView
