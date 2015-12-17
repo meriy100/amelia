@@ -6,6 +6,12 @@ module ActionView
       encode!
     end
 
+    def virtual_path= arg
+      binding.pry
+      @virtual_path = arg
+      self
+    end
+
     def <<(value)
       return self if value.nil?
       super(value.internationalization.to_s)
