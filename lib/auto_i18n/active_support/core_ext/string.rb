@@ -1,6 +1,6 @@
 class String
-  def internationalization
-    TranslationBuffer.new(self).i18n
+  def internationalization virtual_path = nil
+    TranslationBuffer.new(self).i18n virtual_path
   end
 
   alias :i18n :internationalization

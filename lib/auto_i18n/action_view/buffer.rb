@@ -6,9 +6,14 @@ module ActionView
       encode!
     end
 
+    def virtual_path= arg
+      @virtual_path = arg
+      self
+    end
+
     def <<(value)
       return self if value.nil?
-      super(value.internationalization.to_s)
+      super(value.internationalization(@virtual_path).to_s)
     end
     alias :append= :<<
 
