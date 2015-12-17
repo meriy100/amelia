@@ -6,8 +6,7 @@ module ActionView
       class Erubis < ::Erubis::Eruby
         def add_preamble(src)
           @newline_pending = 0
-          binding.pry
-          src << "@output_buffer = output_buffer || ActionView::OutputBuffer.new;"
+          src << "@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.virtual_path = @virtual_path;"
         end
 
         def add_text(src, text)

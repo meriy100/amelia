@@ -7,7 +7,6 @@ module ActionView
     end
 
     def virtual_path= arg
-      binding.pry
       @virtual_path = arg
       self
     end

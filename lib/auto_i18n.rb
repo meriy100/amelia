@@ -10,8 +10,8 @@ require 'auto_i18n/action_view/helpers/tag_helper'
 require 'auto_i18n/action_view/helpers/form_helper'
 # require 'auto_i18n/action_view/helpers/capture_helper'
 require 'auto_i18n/action_view/buffer'
-# require 'auto_i18n/action_view/template/handlers/erb.rb'
-require 'auto_i18n/action_view/template'
+require 'auto_i18n/action_view/template/handlers/erb.rb'
+# require 'auto_i18n/action_view/template'
 
 module AutoI18n
 #  autoload :ActionView
