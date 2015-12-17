@@ -4,7 +4,7 @@ require 'active_support/deprecation'
 
 module ActiveSupport #:nodoc:
   class SafeBuffer < String
-    def internationalization
+    def internationalization virtual_path = nil
       self
     end
 

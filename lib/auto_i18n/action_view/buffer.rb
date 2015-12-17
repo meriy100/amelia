@@ -13,7 +13,7 @@ module ActionView
 
     def <<(value)
       return self if value.nil?
-      super(value.internationalization.to_s)
+      super(value.internationalization(@virtual_path).to_s)
     end
     alias :append= :<<
 

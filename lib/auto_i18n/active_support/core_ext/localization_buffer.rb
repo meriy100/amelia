@@ -1,5 +1,5 @@
 module LocalizationBuffer
-  def internationalization
+  def internationalization virtual_path = nil
     I18n.l self, (@options ||= {})
   end
 

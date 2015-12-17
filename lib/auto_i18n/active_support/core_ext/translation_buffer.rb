@@ -25,7 +25,8 @@ class TranslationBuffer < String
     self
   end
 
-  def internationalization
+  def internationalization virtual_path = nil
+    @virtual_path = virtual_path
     translate_flag? ? translate(self, @options).translate_false : self
   end
 

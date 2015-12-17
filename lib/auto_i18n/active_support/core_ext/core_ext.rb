@@ -2,7 +2,7 @@ require 'auto_i18n/active_support/core_ext/localization_buffer'
 
 class Object
 
-  def internationalization
+  def internationalization virtual_path = nil
     self
   end
 #
