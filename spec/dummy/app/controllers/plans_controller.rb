@@ -11,6 +11,10 @@ class PlansController < ApplicationController
   # GET /plans/1
   # GET /plans/1.json
   def show
+    erb = <<"EOS"
+<button class="btn btn-primary"><%= Date.today %></button>
+EOS
+    render inline: erb
   end
 
   # GET /plans/new
