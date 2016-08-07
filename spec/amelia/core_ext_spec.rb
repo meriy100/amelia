@@ -1,7 +1,7 @@
 require "rails_helper"
 
-describe AutoI18n do
-  let(:str){ String.new("string"){include AutoI18n} }
+describe Amelia do
+  let(:str){ String.new("string"){include Amelia} }
   it 'Squawk' do
     expect(str.to_squawk).to eql "squawk! #{str}"
   end

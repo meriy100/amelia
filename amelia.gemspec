@@ -1,17 +1,17 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "auto_i18n/version"
+require "amelia/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "auto_i18n"
-  s.version     = AutoI18n::VERSION
+  s.name        = "amelia"
+  s.version     = Amelia::VERSION
   s.authors     = ["meriy100"]
   s.email       = ["ttattataa@gmail.com"]
   s.homepage    = "http://www.sw.it.aoyama.ac.jp/2015/kariyado/index.html"
-  s.summary     = "Summary of AutoI18n."
-  s.description = "Description of AutoI18n."
+  s.summary     = "Summary of amelia."
+  s.description = "Description of amelia."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]

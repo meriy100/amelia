@@ -1,4 +1,4 @@
-require 'auto_i18n/active_support/core_ext/localization_buffer'
+require 'amelia/active_support/core_ext/localization_buffer'
 
 class Object
 

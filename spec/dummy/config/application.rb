@@ -9,7 +9,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require(*Rails.groups)
-require "auto_i18n"
+require "amelia"
 
 module Dummy
   class Application < Rails::Application

@@ -1,3 +1,3 @@
-module AutoI18n
+module Amelia
   VERSION = "0.0.6"
 end

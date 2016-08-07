@@ -1,8 +1,8 @@
-#auto_i18n/view_helpers/action_view.rb
+#amelia/view_helpers/action_view.rb
 
 require 'action_view'
 
-module AutoI18n
+module Amelia
   module ViewHelpers
     module ActionView
          class Greet

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    auto_i18n (0.0.6)
+    amelia (0.0.6)
       actionview (~> 4.2)
       activerecord (~> 4.2)
       i18n
@@ -185,7 +185,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  auto_i18n!
+  amelia!
   awesome_print
   better_errors
   binding_of_caller
@@ -203,4 +203,4 @@ DEPENDENCIES
   twitter-bootstrap-rails
 
 BUNDLED WITH
-   1.10.6
+   1.12.5
