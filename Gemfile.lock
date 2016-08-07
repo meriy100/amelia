@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    amelia (0.0.6)
+    amelia (1.0.0)
       actionview (~> 4.2)
       activerecord (~> 4.2)
       i18n
