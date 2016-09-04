@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Amelia::VERSION
   s.authors     = ["meriy100"]
   s.email       = ["ttattataa@gmail.com"]
-  s.homepage    = "http://www.sw.it.aoyama.ac.jp/2015/kariyado/index.html"
+  s.homepage    = "https://github.com/meriy100/amelia"
   s.summary     = "Summary of amelia."
   s.description = "Description of amelia."
   s.license     = "MIT"
